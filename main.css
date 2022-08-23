@@ -1,0 +1,156 @@
+body{
+  color: #cccccc;
+}
+/* Travel Time */
+.homepageimage{
+  background-image:url("indexpagebgimage.png") ; 
+  background-size:cover;  
+  background-position:center;
+  width: 100%;
+  height: 100vh;
+}
+
+nav {  
+  padding: 20px 50px;
+  font-family: poppins;
+  align-items: center;
+}
+
+ nav ul{
+  display: flex;
+  justify-content:space-evenly;
+ 
+ }
+
+
+nav li {
+  list-style: none;
+  display: inline-block;
+  padding: 0 30px;
+}
+
+nav a {
+  text-decoration:solid;
+  color: rgb(244, 231, 231);
+  transition: all 0.3s ease 0s;
+  
+}
+
+nav a:hover {
+  color: #b2dfdb;
+} 
+
+.heading{
+  color:#cccccc;
+  font-size: 96px;
+  font-family: poppins;
+  text-align: center;
+  font-weight: 700; 
+  
+}
+
+/* Join Button*/
+.btn-div{
+  display: flex;
+  top: 75%;
+  left: 50%;  
+  justify-content: center;
+}
+
+p{
+  display:flex;
+  top:30%;
+  left: 50%;
+  justify-content:space-evenly;
+  word-wrap:break-word;
+}
+.btn {
+  display: flex;  
+  background-color: rgb(16, 199, 16);
+  color: white;
+  height: 40px;
+  width: 175px;
+  left: 625px;
+  top: 787px;
+  border-radius: 8px;
+  font-size:medium;
+  justify-content: center;
+
+}
+
+.btn:hover {
+  background-color: rgb(198, 188, 188);
+}
+
+/*.artonimage{
+    display: flex;
+    background-size:cover;   
+    background-repeat:no-repeat;
+    background-position:center;
+    width: 100%;
+}*/
+
+/* section where to go*/
+.wheretogoimage{
+    display: grid;
+    background-image:url("wheretogobgimage.png") ;
+    background-color:#cccccc;
+    background-size:cover;    
+    background-position:center;
+    width: 100%;
+    height:100vh;
+    
+}
+
+@media screen and (min-width: 60em) {
+  .cards {
+    display: flex;  
+    flex-wrap: wrap;
+    justify-content:space-around;
+    margin-top: 40px;
+    margin-left: 20px;
+    
+  }
+  .card {
+    flex: 0 1 calc(60%-1em) ;
+      
+  }
+  .card img {
+    max-width: 100%;
+  }
+}
+
+.card .text {
+  padding: 0 20px 20px;
+}
+.card .text > button {
+  background:none;
+  border: 0;
+  color: white;
+  padding: 10px;
+  width: 100%;
+  }
+
+
+
+/*about Us Page*/
+.aboutusimage{
+  background-image:url("aboutusbgimage.png") ;
+  background-color:#cccccc;
+  background-size:cover;
+  position: relative;  
+  background-position:center;
+  width: 100%;
+  height: 100vh;
+}
+.aboutustext{  
+  text-align: left;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+
+
