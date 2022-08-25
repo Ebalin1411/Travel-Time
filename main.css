@@ -6,7 +6,11 @@
 }
 
 /* Travel Time */
+
+
 .homepageimage{
+  display: flex;
+  flex-direction: column;
   background-image:url("indexpagebgimage.png") ; 
   background-size:cover;  
   background-position:center;
@@ -14,29 +18,21 @@
   height: 100vh;
 }
 
-nav {  
-  padding: 20px 50px;
-  font-family: poppins;
-  align-items: center;
+.nav-class{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
 }
 
- nav ul{
-  display: flex;
-  justify-content:space-evenly;
- 
- }
-
-
-nav li {
-  list-style: none;
-  display: inline-block;
-  padding: 0 30px;
-}
 
 nav a {
   text-decoration:solid;
   color: rgb(244, 231, 231);
-  transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;  
+  padding: 20px 50px;
+  font-family: poppins;
+  align-items: center;
   
 }
 
@@ -44,58 +40,52 @@ nav a:hover {
   color: #b2dfdb;
 } 
 
-.heading{
-  color:#cccccc;
-  font-size: 96px;
-  font-family: poppins;
-  top:40%;
-  text-align: center;
-  font-weight: 700; 
+/*....*/
+.heading-div{
+  display: flex;
+  justify-content: center;
   
 }
 
+.heading-div h1{
+  display: flex;
+  color:#cccccc;
+  font-size: 96px;
+  font-family: poppins;  
+  text-align: center;
+  font-weight: 700; 
+  left: 50%;  
+  margin-top:10%; 
+  }
 
-p{
+
+.para-div p{
   display:flex;
-  color: #b2dfdb;
-  top:60%;
-  left: 50%;
-  justify-content:space-evenly;
-  word-wrap:break-word;
+  color: #6c706f;   
+  justify-content:center;
+  word-wrap:wrap;
+  
+  
 }
 
 /* Join Button*/
-.btn-div{
-  display: flex; 
-  justify-content: center;
-  align-items: center; 
-
-  
-}
-
-.btn {
-   
+.para-div button{
+  position:relative;  
+  left: 50%;  
+  margin-top:10%; 
   background-color: rgb(16, 199, 16);
   color: white;
-  height: 30px;
+  height: 40px;
   width: 175px;  
   border-radius: 8px;
   font-size:small;
-  justify-content: center;
-
+  
 }
 
 .btn:hover {
   background-color: rgb(198, 188, 188);
 }
 
-/*.artonimage{
-    display: flex;
-    background-size:cover;   
-    background-repeat:no-repeat;
-    background-position:center;
-    width: 100%;
-}*/
 
 /* section where to go*/
 .wheretogoimage{
@@ -108,11 +98,12 @@ p{
     
 }
 
- .cards {
+ .container{
     display: flex; 
     justify-content:center ;        
   }
-  .card {
+  
+  .cards {
     background-color:gray;
     width: 320px;    
     margin:10px;
