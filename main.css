@@ -22,17 +22,10 @@ body{
 }
 
 
-.hamburger{  
-  display: flex;
-  justify-content: center ;
-}
-.navMenu{ 
-  display: none;
-  }
-  
 
-/* For big screen view*/
-@media only screen and (min-width:600px){
+
+@media  only screen and (min-width:1025px){
+  /* Desktop and Labtops*/
   .hamburger{   
     display: none;
   }
@@ -57,9 +50,51 @@ body{
     color: #092926;
   } 
   
-}
+   }
+   /* Tablets*/
+   @media only screen and (max-width:960px){
+  
+    .hamburger{   
+      display: none;
+    }
+    
+    .navMenu{
+     
+      display: flex;    
+      flex-direction: row;  
+      justify-content:center;
+    }
+    nav a {
+      text-decoration:solid;
+      color: rgb(244, 231, 231);
+      transition: all 0.3s ease 0s;  
+      padding: 20px 50px;
+      font-family: poppins;
+      align-items: center;
+      margin-left: -15px;
+      margin-right: -15px;
+    
+    }
+    
+    nav a:hover {
+      color: #092926;
+    } 
+    
+     }
 
 
+
+     /* For Phones */
+     @media only screen and (max-width:480px){
+  
+      .hamburger{  
+        display: flex;
+        justify-content: center ;
+      }
+      .navMenu{ 
+        display: none;
+        }
+       }
 
 
 /*....*/
@@ -149,7 +184,7 @@ body{
    
       .container {  
      
-        grid-template-columns: 1fr 1fr 1fr; }
+        grid-template-columns: 1fr 1fr; }
       }
       /* For Phones */
       @media only screen and (max-width:480px){
