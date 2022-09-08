@@ -4,7 +4,10 @@
   padding: 0;
   margin: 0;
 }
-
+body{
+  background-image:url("./assets/images/Backround.png") ; 
+  
+}
 /* Travel Time */
 
 
@@ -12,74 +15,90 @@
   display: flex;
   flex-direction: column;
   background-image:url("indexpagebgimage.png") ; 
-  background-size:cover;  
-  background-position:center;
+  background-size:cover;
+  background-position:center; 
   width: 100%;
   height: 100vh;
 }
 
-.nav-class{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-around;
+
+.hamburger{  
+  display: flex;
+  justify-content: center ;
 }
+.navMenu{ 
+  display: none;
+  }
+  
 
-
-nav a {
-  text-decoration:solid;
-  color: rgb(244, 231, 231);
-  transition: all 0.3s ease 0s;  
-  padding: 20px 50px;
-  font-family: poppins;
-  align-items: center;
+/* For big screen view*/
+@media only screen and (min-width:600px){
+  .hamburger{   
+    display: none;
+  }
+  
+  .navMenu{
+   
+    display: flex;    
+    flex-direction: row;  
+    justify-content:center;
+  }
+  nav a {
+    text-decoration:solid;
+    color: rgb(244, 231, 231);
+    transition: all 0.3s ease 0s;  
+    padding: 20px 50px;
+    font-family: poppins;
+    align-items: center;
+    
+  }
+  
+  nav a:hover {
+    color: #092926;
+  } 
   
 }
 
-nav a:hover {
-  color: #b2dfdb;
-} 
+
+
 
 /*....*/
 .heading-div{
-  display: flex;
-  justify-content: center;
-  
+  display: flex; 
+  justify-content: center;  
 }
 
-.heading-div h1{
-  display: flex;
+.heading-div h1{ 
   color:#cccccc;
   font-size: 96px;
-  font-family: poppins;  
-  text-align: center;
-  font-weight: 700; 
-  left: 50%;  
+  font-family: poppins;   
+  font-weight: 700;   
   margin-top:10%; 
+
   }
 
-
-.para-div p{
-  display:flex;
-  color: #6c706f;   
+.para-div{
+  display: flex; 
   justify-content:center;
-  word-wrap:wrap;
-  
-  
+  text-align: center;
+  color: #607d76;    
 }
 
+
 /* Join Button*/
-.para-div button{
-  position:relative;  
-  left: 50%;  
-  margin-top:10%; 
-  background-color: rgb(16, 199, 16);
+.joinButton{
+  display: flex;
+  justify-content: center;
+  padding-top: 15%;
+}
+.joinButton button{ 
+  background-color: rgb(16, 199, 16);  
   color: white;
   height: 40px;
   width: 175px;  
   border-radius: 8px;
-  font-size:small;
-  
+  font-size:large; 
+ 
 }
 
 .btn:hover {
@@ -91,70 +110,90 @@ nav a:hover {
 
 .wheretogoimage{
     display: flex;
+    flex-direction: column;
     background-image:url("wheretogobgimage.png") ;    
     background-size:cover;    
-    background-position:center;
-  
+    background-position:center;  
     width: 100%;
-    height:100vh;
-    
-}
-
- .container{
-  display:flex;
-  justify-content: center;
-  margin-top: 50px;
-  margin-left: 50px;
-    
-
-  }
-  
-  .cards {
-    flex-direction: column;
-    width: 200px;
-    margin: 10px;
-    background-color: gray;    
-    border-radius: 15px; 
-    transition: 0.2s; 
+    height:auto;
      
+}
+.secondPageText{
+  color:#cccccc;  
+  font-family: poppins;  
+  text-align:center;
+  margin-top: 30px;
   }
+ 
+   
+  .container{
+  margin-top: 50px;
+  margin-bottom: 100px;
+  margin-left: 100px;
+  margin-right: 100px; 
+  display:grid;    
+  color: #cccccc;
+  grid-gap: 1rem;
 
-  .card-image img{
-      
-    justify-content: center;
-    background-size:cover ;
-    border-radius:15px 15px 0 0;
-  }
-.card-body{
-  display: flex;
-  flex-direction: column;
+  } 
 
+ 
+@media  only screen and (min-width:1025px){
+   /* Desktop and Labtops*/
+    .container {  
+     
+      grid-template-columns: 1fr 1fr 1fr 1fr; }
+    }
+    /* Tablets*/
+    @media only screen and (max-width:960px){
+   
+      .container {  
+     
+        grid-template-columns: 1fr 1fr 1fr; }
+      }
+      /* For Phones */
+      @media only screen and (max-width:480px){
+   
+        .container {  
+       
+          grid-template-columns: 1fr; }
+        }
+   
+    
+  
+ .container >div {  
+ border: 2px solid #484646; 
+ border-radius: 1px;  
+ padding: .5rem;
+ background-color: #58585858;   
+
+ 
 }
 
-.cards:hover{
+
+
+  .container >div img{ 
+  width: 100%;
+  height:auto;
+  border-radius: 1em;
+}  
+
+.container >div p{
+  text-align:left;
+} 
+.container.cards:hover{
   box-shadow: 10px 10px 5px rgb(37, 35, 35);
 }
 
-.card-body p{
-  display: flex;
-  flex-wrap: wrap;
-  padding:10px;  
-  white-space: normal;
-  
-}
-.card-footer{
-  display: flex;
-  justify-content:center;
-  
-}
-
-.card-footer button{ 
+ 
+.container >div button{ 
   background-color: transparent;
   background-color: #6c706f;
   text-decoration:none;
-
+  float: right;
 
 }
+
 
 
 /*about Us Page*/
